@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+        window.onload=function(){
+            var story = document.getElementById('word');
+            var s = document.getElementById('show');
+            var i = 0;
+            timer=setInterval(function(){
+                s.innerHTML=story.innerHTML.substring(0,i);
+                i++;
+                if(s.innerHTML==story.innerHTML){
+                    clearInterval(timer);
+                }              
+            },70);
+        }
+    </script>
+
+     <style type="text/css">
+         body {background-image:url(littleboy.jpg);
+            background-size: 100% cover; 
+            background-repeat: no-repeat;  
+            background-opacity:0.7;
+            color:white;
+         }
+         div{
+            position:relative;
+            left:50px;/*左边线距离左边框100px*/
+            top:200px;/*上边线距离上边框100px*/
+            width: 900px;
+            height:200px;
+            font-size : 4em;
+            }
+
+     </style>
+
+</head>
+<body>
+    <div>
+        <p id="show"></p>
+        
+        <p id="word" style="display:none;">  “卓越女生计划”，全称“西安邮电大学ThoughtWorks联合创新实验室”，是ThoughtWorks公司联合西安邮电大学于2015年12月创立，创立至今也已走了三个年头，在学校芸芸实验室中也是唯一一间以前端为首，后台为辅，从前端学习入手，培养成员学习习惯，学习兴趣，学习热情的实干型实验室。</p>
+    </div>
+ 
+</body>
+</html>
